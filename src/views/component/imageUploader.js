@@ -33,10 +33,10 @@ function ImageUploader(props) {
                 type="file"
                 onChange={(e) => handleImageChange(e)} />
             <div className="imgPreview">
-                {card.picture ? card.picture.map((pic) => {
+                {card.picture ? card.picture.map((pic, index) => {
                     if (pic.imagePreviewUrl) {
                         return (
-                            <div>
+                            <div key={index}>
                                 <hr />
                                 <img src={pic.imagePreviewUrl} alt='' />
                             </div>
